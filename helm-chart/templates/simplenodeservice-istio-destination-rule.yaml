@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: simplenodeservice-simpleproject-prod-destination
+spec:
+  host: simplenodeservice.simpleproject-prod.svc.cluster.local
+  subsets:
+  - name: blue
+    labels:
+      deployment: simplenodeservice-blue
+  - name: green
+    labels:
+      deployment: simplenodeservice-green
