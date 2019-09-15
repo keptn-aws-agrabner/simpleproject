@@ -21,7 +21,7 @@ spec:
         imagePullPolicy: {{ .Values.simplenodeservice.image.pullPolicy }}
         env:
         - name: DT_TAGS
-          value: "application={{ .Chart.Name }} deployment=Blue"
+          value: "application={{ .Chart.Name }} deployment=Direct"
         - name: DT_CUSTOM_PROP
           value: "keptn_project={{ .Chart.Name }} keptn_service={{ .Values.simplenodeserviceGreen.service.name }}"
         - name: POD_NAME
